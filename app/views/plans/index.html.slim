@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Plans
+
+#plans
+  - @plans.each do |plan|
+    == render plan
+    p
+      = link_to "Show this plan", plan
+
+= link_to "New plan", new_plan_path

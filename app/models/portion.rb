@@ -1,0 +1,2 @@
+class Portion < ApplicationRecord
+end

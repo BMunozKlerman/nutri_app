@@ -1,0 +1,10 @@
+= form_with(model: plan) do |form|
+  - if plan.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(plan.errors.count, "error")} prohibited this plan from being saved:"
+      ul
+        - plan.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.submit
